@@ -61,7 +61,7 @@ export const constantRoutes = [
       {
         path: 'List',
         name: 'CustomerList',
-        component: () => import('@/peges/customer/List'),
+        component: () => import('@/pages/customer/List'),
         meta: { title: '顾客管理', icon: 'user' }
       }
     ]
@@ -72,7 +72,7 @@ export const constantRoutes = [
       {
         path: 'List',
         name: 'employeeList',
-        component: () => import('@/peges/employee/List'),
+        component: () => import('@/pages/employee/List'),
         meta: { title: '员工管理', icon: 'user' }
       }
     ]
@@ -83,18 +83,31 @@ export const constantRoutes = [
       {
         path: 'List',
         name: 'categoryList',
-        component: () => import('@/peges/category/List'),
+        component: () => import('@/pages/category/List'),
         meta: { title: '栏目管理', icon: 'user' }
       }
     ]
-  }, {
+  },
+   {
     path: '/pruduct',
     component: Layout,
     children: [
       {
         path: 'List',
         name: 'productList',
-        component: () => import('@/peges/product/List'),
+        component: () => import('@/pages/product/List'),
+        meta: { title: '产品管理', icon: 'user' }
+      }
+    ]
+  },
+  {
+    path: '/p',
+    component: Layout,
+    children: [
+      {
+        path: 'List',
+        name: 'productList',
+        component: () => import('@/pages/product/List'),
         meta: { title: '产品管理', icon: 'user' }
       }
     ]
