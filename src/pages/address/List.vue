@@ -85,7 +85,7 @@ export default {
       // request.post(url,this.form)
       // 查询字符串 type=address&age=12
       // 通过request与后台进行交互，并且要携带参数
-      let url = "http://localhost:6677/address/findAll";
+      let url = "http://localhost:6677/address/saveOrUpdate ";
       request({
         url,
         method:"POST",
@@ -134,7 +134,7 @@ export default {
     },
     toAddHandler(){
       this.form = {
-        tupe:"address"
+        type:"address"
       }
       this.visible = true;
     }
