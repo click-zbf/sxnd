@@ -15,7 +15,7 @@
             <el-table-column label="操作">
             <template v-slot="slot">
                 <a href="" @click.prevent="toDeleteHandler(slot.row.id)">删除</a>
-                <a href="" @click.prevent="toUpdataHandler(slot.row)">修改</a>
+                <a href="" @click.prevent="toUpdataHandler">修改</a>
                 <a href="" @click.prevent="">详情</a>
 
 
@@ -30,7 +30,7 @@
         <!--模态框 --> 
                            
 <el-dialog :title="title" :visible.sync="visiable" width="60%" >
-
+   
     <el-form :model="form" label-width="80px">
         <el-form-item label="名称">
             <el-input v-model="form.name"></el-input>
@@ -141,7 +141,7 @@ export default {
         }],
         }
     },
-    created(){
+created(){
          //在页面加载出来的时候加载数据
         this.loadData();
     },
@@ -180,7 +180,6 @@ export default {
         },
         toupdataHandler(row){
             this.title="修改产品信息";
-           
             this.visiable=true;
         },
 
@@ -197,9 +196,8 @@ export default {
           });
         })
         },
-        toAddHandler(){
+        toAddHandle(){
             this.title="添加产品信息",
-     
             this.visiable=true;
 },
        closeModalHandler(){
