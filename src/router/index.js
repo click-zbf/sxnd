@@ -101,17 +101,43 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/p',
+    path: '/order',
     component: Layout,
     children: [
       {
         path: 'List',
-        name: 'productList',
-        component: () => import('@/pages/product/List'),
-        meta: { title: '产品管理', icon: 'user' }
+        name: 'orderList',
+        component: () => import('@/pages/order/List'),
+        meta: { title: '订单管理', icon: 'user' }
       }
     ]
   },
+  {
+    path: '/comment',
+    component: Layout,
+    children: [
+      {
+        path: 'List',
+        name: 'commentList',
+        component: () => import('@/pages/comment/List'),
+        meta: { title: '评论管理', icon: 'user' }
+      }
+    ]
+  },
+  {
+    path: '/address',
+    component: Layout,
+    children: [
+      {
+        path: 'List',
+        name: 'addressList',
+        component: () => import('@/pages/address/List'),
+        meta: { title: '地址管理', icon: 'user' }
+      }
+    ]
+  },
+
+
 
   
 
