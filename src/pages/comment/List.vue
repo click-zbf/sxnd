@@ -1,10 +1,9 @@
 <template>
-               
-           <el-button type="primary" size="small" @click="toAddHandle">添加</el-button>         
-        
-
-                </template>
-            </el-table-column>
+     <div>
+        <el-button type="primary" size="small" @click="toAddHandle">添加</el-button>         
+    </div>          
+</template>
+          
 
 <script>
 export default {
